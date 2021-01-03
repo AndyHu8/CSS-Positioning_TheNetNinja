@@ -1,0 +1,167 @@
+<!--CSS POSITIONING #1 (INTRODUCTION)
+What i learn:
+
+- Review the box model
+- normal doc flow
+- floats
+- position prop
+- stacking order and z-index
+- overflowing content
+- text columns
+-->
+
+<!--CSS POSITIONING #2 (BOX MODEL REVIEW)
+Box Model:
+            margin
+|---------------------------------|
+|           padding               |
+|   |-------------------------|   |
+|   |                         |   |
+|   |                         |   |
+|h  |       Element           |   |
+|   |                         |   |
+|   |-------------------------|   |
+|               w                 |
+|---------------------------------|
+h = height, w = width
+-->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>CSS POSITIONING</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+            <li>link</li>
+        </ul>
+    </nav>
+
+    <!--CSS POSITIONING #2-->
+    <h2>CSS POSITIONING #2</h2>
+    <p class="two">block</p> <!--block elements-->
+    <p class="two">block</p>
+    <a class="two" href="">inline</a> <!--inline elements-->
+    <a class="two" href="">inline</a>
+
+    <!--CSS POSITIONING #3 (NORMAL DOC FLOW)-->
+    <h2>CSS POSITIONING #3</h2>
+    <p class="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iure veniam quia expedita et, maiores ipsam non, ex, impedit accusantium eos? Nam sequi repellendus modi alias obcaecati enim in corrupti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt debitis provident dicta recusandae nesciunt in, magnam cupiditate impedit sapiente ratione, explicabo voluptate, voluptatem adipisci distinctio aliquam nulla! Nemo, reprehenderit. Commodi.</p>
+    <p class="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iure veniam quia expedita et, maiores ipsam non, ex, impedit accusantium eos? Nam sequi repellendus modi alias obcaecati enim in corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed quam esse facere animi, eveniet odit omnis aspernatur neque explicabo expedita praesentium enim maiores sit fugit libero odio eius perspiciatis!</p>
+    <p class="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque iure veniam quia expedita et, maiores ipsam non, ex, impedit accusantium eos? Nam sequi repellendus modi alias obcaecati enim in corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis natus quam possimus sint nostrum consequatur vitae nemo nobis itaque, inventore, doloremque voluptatum corrupti nihil perspiciatis aliquam ipsam laudantium laboriosam iusto?</p>
+
+    <!--CSS POSITIONING #4 (FLOATING EL)-->
+    <h2>CSS POSITIONING #4</h2>
+
+    <div class="wrapper">
+        <img src="g2esports.jpg" width="50">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque culpa saepe officia aperiam incidunt placeat voluptas aut commodi temporibus rerum eum optio iure minus molestias expedita consequatur repellat molestiae laborum ratione mollitia nobis, quasi accusamus quaerat! Nisi voluptate tenetur ab velit, inventore fugiat. Doloremque voluptatibus est architecto, ducimus optio consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla facere delectus aut, fuga laboriosam ab dolore repellat, quibusdam odit a expedita accusamus voluptates, temporibus at quia cum? Iusto nam voluptatem laboriosam quaerat, officia vitae perferendis veritatis repellendus placeat rerum, neque assumenda obcaecati voluptates maiores ullam dolorem magnam laborum eligendi facere aliquam ex facilis? Ipsum autem nesciunt, quo odio aliquid veritatis minima praesentium in vero explicabo quod sint quia dignissimos iste. A esse velit fuga accusantium optio corrupti. Optio pariatur maiores iste, assumenda eaque ipsam, tempore enim quidem autem facilis at, aspernatur molestias neque ducimus. Deserunt deleniti officia officiis qui illo?</p>
+        <div class="blue box"></div>
+        <div class="red box"></div>
+        <div class="green box"></div>
+
+        <div class="service">
+            <h2>Service 1</h2>
+            <p>this is service 1</p>
+        </div>
+
+        <div class="service">
+            <h2>Service 1</h2>
+            <p>this is service 2</p>
+        </div>
+
+        <div class="service">
+            <h2>Service 1</h2>
+            <p>this is service 3</p>
+        </div>
+    
+
+    <!--CSS POSITIONING #5 (CLEARING FLOATS)-->
+    <h2>CSS POSITIONING #5</h2>
+
+    <div class="services">
+    <div class="service">
+        <h2>Service 1</h2>
+        <p>this is service 1</p>
+    </div>
+
+    <div class="service">
+        <h2>Service 1</h2>
+        <p>this is service 2</p>
+    </div>
+
+    <div class="service">
+        <h2>Service 1</h2>
+        <p>this is service 3</p>
+    </div>
+    </div>
+
+    <div style="clear: both;"></div> <!--Entweder div oder ::after-->
+
+    <div class="content">
+        <h2>Content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam excepturi explicabo amet hic ullam, inventore unde voluptatem eaque asperiores non quaerat voluptas accusamus laboriosam dolor eos minima molestias. Illo atque repellendus modi esse tempora accusamus similique sint ut, ratione natus maxime magnam quis inventore quaerat at assumenda quasi vel repudiandae blanditiis quisquam libero doloremque cum ipsam explicabo! Sapiente esse velit voluptatem excepturi aperiam nemo tenetur nulla adipisci, molestias at quis ipsa, ea vel itaque voluptate a explicabo corrupti repellendus dolorum, officia maxime? A, eaque. Harum rerum molestias iure dignissimos nemo, cumque dolore nostrum iusto veritatis reprehenderit dolorum quidem quasi quia, debitis earum illum odio vitae cum corrupti eos deserunt voluptates rem ad blanditiis? Rem, fugit libero adipisci ullam blanditiis pariatur, nesciunt omnis numquam quas soluta beatae quia dolore! Excepturi, quasi illum nisi, debitis maiores sed doloribus in iste nobis ullam, provident adipisci deserunt saepe incidunt architecto non optio at.</p>
+    </div>
+
+    <!--CSS POSITIONING #6 (FLOATING COLUMNS)-->
+    <h2>CSS POSITIONING #6</h2>
+
+    <div class="content_lesson6">
+        <h2>Content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam excepturi explicabo amet hic ullam, inventore unde voluptatem eaque asperiores non quaerat voluptas accusamus laboriosam dolor eos minima molestias. Illo atque repellendus modi esse tempora accusamus similique sint ut, ratione natus maxime magnam quis inventore quaerat at assumenda quasi vel repudiandae blanditiis quisquam libero doloremque cum ipsam explicabo! Sapiente esse velit voluptatem excepturi aperiam nemo tenetur nulla adipisci, molestias at quis ipsa, ea vel itaque voluptate a explicabo corrupti repellendus dolorum, officia maxime? A, eaque. Harum rerum molestias iure dignissimos nemo, cumque dolore nostrum iusto veritatis reprehenderit dolorum quidem quasi quia, debitis earum illum odio vitae cum corrupti eos deserunt voluptates rem ad blanditiis? Rem, fugit libero adipisci ullam blanditiis pariatur, nesciunt omnis numquam quas soluta beatae quia dolore! Excepturi, quasi illum nisi, debitis maiores sed doloribus in iste nobis ullam, provident adipisci deserunt saepe incidunt architecto non optio at.</p>
+    </div>
+
+    <div class="columns">
+        <section>
+            <h2>This is column 1</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea consectetur eos eveniet dolores repudiandae quidem sed, reiciendis, est vitae deserunt reprehenderit, a incidunt iure quasi repellat perspiciatis. Et, consequatur aliquam, excepturi esse expedita quam culpa quos, placeat est assumenda perferendis omnis. Ab tempore qui vitae at vero cumque delectus maxime quidem quas, repellendus, accusamus ad vel laboriosam! Ratione possimus cum quo eius, dignissimos voluptatibus. Explicabo iure eligendi maxime? Est suscipit, amet cum expedita tenetur optio aperiam enim quaerat ipsum dolorem totam facilis ut, temporibus aspernatur hic provident officia itaque ab harum. Facilis ipsum pariatur temporibus quibusdam dolore! Officiis voluptas dolorum enim, beatae iste id, aut illo similique laboriosam tenetur ipsam, quasi minus unde deleniti atque. Nesciunt dicta recusandae vitae odit distinctio, nulla, quibusdam autem nisi ea neque minus odio itaque officiis temporibus ipsa? Illo natus voluptas adipisci qui sapiente amet dignissimos in a, quae, veritatis tempora quis nisi architecto laudantium!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quod tempora ducimus magnam quidem nostrum ab sapiente dolor, vel accusantium asperiores autem ut quo optio omnis enim sed. Natus facere inventore quo at, nihil, iure dicta quis eos ipsa reiciendis doloribus harum maiores deleniti! Qui sed aliquid dignissimos, molestiae iusto rem quibusdam porro. Commodi tenetur, quas doloremque suscipit accusamus aperiam nihil dicta amet nesciunt excepturi qui libero ducimus, animi delectus neque sapiente aut repudiandae repellat eaque? Hic officiis voluptas vero in placeat repudiandae sed vitae veritatis blanditiis cum laudantium nulla corrupti nisi dolorum, animi error ipsa cumque eveniet consectetur, dignissimos obcaecati autem et. Laborum voluptates voluptatem labore. Nemo at tenetur veniam aperiam iste doloribus expedita ea cum exercitationem qui laudantium excepturi earum unde ex illo tempore quas vitae a ipsa magnam, officia quo commodi sed nihil? Nam itaque nisi quo, placeat iusto nihil animi minima, nulla natus voluptatum velit consequatur?</p>
+        </section>
+        <aside>
+            <h2>This is column 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nemo similique quibusdam officiis rerum nihil minima debitis beatae aliquid aperiam. Aperiam ea laudantium commodi soluta dolores laborum ex enim. Architecto voluptatibus harum eos, voluptates aliquid laudantium error similique nisi libero? Officiis provident explicabo repellat non at in impedit rem. Labore nemo sed voluptates. Adipisci animi praesentium nulla impedit eaque? Nesciunt dolorum dolor quam fugit animi ipsa cumque, necessitatibus cupiditate doloribus accusantium beatae eum. Reprehenderit nostrum molestiae ipsa, amet earum aliquam. Hic quod est beatae? Vitae dolorem repudiandae et qui, consectetur eveniet cupiditate, voluptas libero ducimus odio doloribus, dolore fugit maxime earum totam. Quod natus, suscipit rem pariatur dicta doloribus esse quam incidunt, facere omnis ipsam veritatis similique exercitationem maiores deserunt nemo? Possimus soluta praesentium veritatis molestias beatae facere fugiat odio! Velit, voluptate consequuntur? Rem nisi quibusdam quisquam, fugit a voluptates ut velit aliquam cum vel possimus facilis culpa tempore deserunt?</p>
+            <img src="g2esports.jpg" width="100%">
+        </aside>
+    </div>
+
+    <!--CSS POSITIONING #7 (TEXT COLUMNS WITHOUT FLOATS)-->
+    <h2>CSS POSITIONING #7</h2>
+    <p>Änderung am Klasse: content von content_lessen6</p>
+
+    <!--CSS POSITIONING #8 (POSITION RELATIVE)-->
+    <h2>CSS POSITIONING #8</h2>
+    <p>Änderung am Klasse: content von content_lessen6</p>
+    <p>Änderung am Klasse: content von service</p>
+
+    <!--CSS POSITIONING #9 (ABSOLUTE POSITION)-->
+    <h2>CSS POSITIONING #9</h2>
+    
+    <div id="banner">
+        <img src="g2esports.jpg" width="100%">
+        <h2>G2 Esports Thinking!</h2>
+    </div>
+
+    <!--CSS POSITIONING #10 (FIXED POSITION)-->
+    <h2>CSS POSITIONING #10</h2>
+    <p>siehe fixed nav</p>
+    
+
+    <!--CSS POSITIONING #11 (Z-INDEX & STACKING ORDER)-->
+    <h2>CSS POSITIONING #11</h2>
+    <p>siehe nav = z-index(1), banner = z-index(2)</p>
+
+    <!--CSS POSITIONING #12 (CLIPPING CONTENT)-->
+    <h2>CSS POSITIONING #12</h2>
+    <p>siehe service columns bei CSS POSITIONING #5</p>
+
+</div>
+    
+</body>
+</html>

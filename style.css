@@ -1,0 +1,53 @@
+/*CSS POSITIONING #2*/
+.two {width: 30%; margin: 20px; padding: 30px; border: 2px solid black; display: inline-block;} /*Inline-block: Wenn width es erlaubt, verschiebt es sich in die freie Stelle
+
+/*CSS POSITIONING #3*/
+.three {padding: 20px; background-color: #eee; font-family: arial; line-height: 1.4em;}
+
+/*CSS POSITIONING #4*/
+.wrapper {background-color: white; max-width: 1500px; margin: 0 auto; padding: 20px;}
+img {float: left; margin: 10px;}
+
+/*.blue {background-color: blue; float: left;}
+.red {background-color: red; float: left;}
+.green {background-color: green; float: right;}
+.box {height: 100px; width: 100px;}*/
+
+.service h2, .service p {color: #999; margin: 10px 0; text-align: center;} /*bei margin erste is top/bot, zweite ist left/right*/
+.service {float: left; background: #eee; width: 29.33%; margin: 1%; padding: 1%; height: 140px; position: relative;}
+
+/*CSS POSITIONING #5*/
+.content { padding: 10px; background: #ccc; clear: both; margin-top: 100px;} /*Clear left/right floats => kein background bei floating Content | 
+Margin-top nur weil dazwischen ein div ist, sonst ist es dahinter*/
+.services::after {content: ''; display: block; clear: both;} /*(after = hinter services kommt content | Margin-top nur weil hier dazwischen ein Block-Content ist bzw. floating aufhebt)*/
+
+/*CSS POSITIONING #6*/
+.content_lesson6 { padding: 10px; clear: left; margin: 20px 1%; position: relative; left: 50px;}
+section, aside {float: left; width: 46%; padding: 1%; margin: 1%; background: #f2f2f2;} /*Muss Width vergeben, da es sonst 100% einnimmt #block-el*/
+.columns::after {display: block; content: ''; clear: both;} /*hebt das floating auf*/
+
+/*CSS POSITIONING #7*/
+.content_lesson6 p {-webkit-column-count: 3; column-count: 3; -webkit-column-gap: 50px; column-gap: 50px; -webkit-column-rule: 1px solid #ccc; column-rule: 1px solid #ccc; text-align: justify;} /*In wievielen Spalten soll es geteilt werden
+
+/*CSS POSITIONING #8*/
+/*Änderung am Klasse: content von content_lessen6: Wenn left/right/top/bot, dann verschiebt alles in die Richtung, ABER der alte Platz bleibt
+Änderung am Klasse: content von service: Abstand von oben*/
+.service:nth-child(1) {top:5px;} /*Erstes Child*/
+.service:nth-child(2) {top:15px;}
+.service:nth-child(3) {top:25px;}
+
+/*CSS POSITIONING #9*/
+#banner {max-height: 300px; overflow: hidden; margin: 1%; position: relative;}
+#banner h2 {position: absolute; top: 30px; margin: 0; color:black; width: 100%; text-align: center;} /*Text ist in der mitte vom bild*/
+
+/*CSS POSITIONING #10*/
+nav {background: #333; padding: 5px; position: fixed; top: 0; left: 0; width: 100%;}
+nav ul::after {content: ""; display: block; clear: both;}
+nav li {list-style: none; margin: 0 15px; color: white; float: right;}
+
+/*CSS POSITIONING #11*/
+nav {z-index: 1;} /*Default = 0*/
+#banner {z-index: 2;}
+
+/*CSS POSITIONING #12*/
+.services {max-height: 150px; overflow: hidden;} /*Alles, was über der Box hinaus geht: was soll damit geschehen*/
